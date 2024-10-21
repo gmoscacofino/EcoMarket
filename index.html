@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoMarket - Tu tienda online de productos sostenibles y ecológicos. Compra productos eco-friendly para un futuro mejor.">
+    <title>EcoMarket - Productos Sostenibles</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="EcoMarket Logo" width="40" height="40">
+                    <span class="brand-name">EcoMarket</span>
+                </a>
+                <div class="navbar-right d-flex align-items-center">
+                    <a class="nav-link ms-2 order-lg-2" href="carrito.html" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                    <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#productos">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#sostenibilidad">Sostenibilidad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h1 class="display-3">Bienvenido a EcoMarket</h1>
+                    <p class="lead mb-4">Tu tienda online de productos sostenibles y ecológicos. Descubre productos que cuidan el planeta.</p>
+                    <a href="#productos" class="btn btn-primary btn-lg">Explorar Productos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PRODUCTOS -->
+    <section id="productos" class="productos py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros Productos Sostenibles</h2>
+            <div class="products-scroll">
+                <div class="row flex-nowrap">
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto1.png" class="card-img-top" alt="Botella Reutilizable" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto1.png" data-name="Botella Reutilizable" data-price="$19.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Botella Reutilizable</h5>
+                                <p class="card-text">$19.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="1" data-name="Botella Reutilizable" data-price="19.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto2.png" class="card-img-top" alt="Bolsa Ecológica" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto2.png" data-name="Bolsa Ecológica" data-price="$14.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Bolsa Ecológica</h5>
+                                <p class="card-text">$14.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="2" data-name="Bolsa Ecológica" data-price="14.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto3.png" class="card-img-top" alt="Cepillo de Bambú" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto3.png" data-name="Cepillo de Bambú" data-price="$9.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Cepillo de Bambú</h5>
+                                <p class="card-text">$9.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="3" data-name="Cepillo de Bambú" data-price="9.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto4.png" class="card-img-top" alt="Percha Sostenible" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto4.png" data-name="Percha Sostenible" data-price="$12.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Percha Sostenible</h5>
+                                <p class="card-text">$12.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="4" data-name="Percha Sostenible" data-price="12.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto5.avif" class="card-img-top" alt="Jabón Ecológico" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto5.avif" data-name="Jabón Ecológico" data-price="$7.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Jabón Ecológico</h5>
+                                <p class="card-text">$7.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="5" data-name="Jabón Ecológico" data-price="7.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto6.png" class="card-img-top" alt="Cubiertos de Bambú" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto6.png" data-name="Cubiertos de Bambú" data-price="$15.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Cubiertos de Bambú</h5>
+                                <p class="card-text">$15.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="6" data-name="Cubiertos de Bambú" data-price="15.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product-card card h-100">
+                            <img src="producto7.png" class="card-img-top" alt="Vaso Sostenible x 10" data-bs-toggle="modal" data-bs-target="#productModal" data-img="producto7.png" data-name="Vaso Sostenible x 10" data-price="$0.99">
+                            <div class="card-body">
+                                <h5 class="card-title">Vaso Sostenible x 10</h5>
+                                <p class="card-text">$0.99</p>
+                                <button class="btn btn-sm btn-outline-success add-to-cart" data-id="7" data-name="Vaso Sostenible x 10" data-price="0.99">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SOSTENIBILIDAD -->
+    <section id="sostenibilidad" class="sostenibilidad bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Nuestro Compromiso con la Sostenibilidad</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-leaf fa-3x mb-3 text-success"></i>
+                            <h5 class="card-title">Productos Eco-friendly</h5>
+                            <p class="card-text">Todos nuestros productos son seleccionados cuidadosamente para minimizar el impacto ambiental.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-recycle fa-3x mb-3 text-primary"></i>
+                            <h5 class="card-title">Empaquetado Reciclable</h5>
+                            <p class="card-text">Utilizamos materiales reciclables y biodegradables en nuestros paquetes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card mb-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hand-holding-heart fa-3x mb-3 text-danger"></i>
+                            <h5 class="card-title">Comercio Justo</h5>
+                            <p class="card-text">Apoyamos a productores locales y prácticas de comercio justo en toda nuestra cadena de suministro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DESAFÍO ECOLÓGICO Y HUELLA ECOLOGICA -->
+    <section id="desafio-ecologico" class="desafio-ecologico py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Tu Impacto Ecológico Diario</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title text-success">Desafío Mensual: 30 Días Sin Plástico</h3>
+                            <p class="card-text">¡Únete a nuestro reto para reducir drásticamente el uso de plástico! Cada pequeña acción suma. Aquí tienes 5 pasos para empezar:</p>
+                            <ol class="list-group list-group-flush flex-grow-1">
+                                <li class="list-group-item">
+                                    <strong>Bolsas reutilizables:</strong> Usa bolsas de tela para tus compras.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Botella rellenable:</strong> Lleva tu propia botella de agua.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Compra a granel:</strong> Elige productos sin embalaje.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Almacenamiento sostenible:</strong> Opta por recipientes de vidrio o acero.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Higiene eco-friendly:</strong> Prueba alternativas sin plástico.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title text-success">Comprende Tu Huella Ecológica</h3>
+                            <p class="card-text">La huella ecológica mide la superficie necesaria para producir los recursos que consumes y absorber los residuos que generas. Reflexiona sobre estas áreas clave:</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>Consumo de energía:</strong> ¿Cuánta energía utilizas en tu hogar y transporte?
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Alimentación:</strong> ¿Qué tan sostenible es tu dieta?
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Consumo:</strong> ¿Compras productos duraderos o de un solo uso?
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Residuos:</strong> ¿Cuántos desechos generas y cómo los gestionas?
+                                </li>
+                            </ul>
+                            <p class="mt-3">Según estudios recientes, la huella ecológica mundial por persona es de 2.7 hectáreas globales, superando la capacidad de regeneración del planeta.</p>
+                            <a href="https://www.footprintcalculator.org/home" class="btn btn-success mt-2" target="_blank">Medir tu huella ecológica</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contactate con nosotros</h2>
+            <p class="text-center mb-4">Si tienes alguna pregunta o deseas saber más sobre nuestros productos, no dudes en contactarnos.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm" class="form-contacto">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="mensaje" placeholder="Tu mensaje" required rows="5"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>EcoMarket &copy; 2024 | Todos los derechos reservados | <a href="#privacidad" class="text-white">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="scripts.js"></script>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="" class="img-fluid mb-3" id="modalProductImage" style="max-height: 300px; width: auto;">
+                    <p id="modalProductPrice" class="fs-4"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
